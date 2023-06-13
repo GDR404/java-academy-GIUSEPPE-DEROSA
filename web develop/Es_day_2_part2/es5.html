@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+</head>
+<body>
+    <img id="image" src="" alt="">
+    <br>
+    <button onclick="change()">Button</button>
+
+    <script>
+        function change(){
+        localStorage.setItem("url", "https://sayingimages.com/wp-content/uploads/cheerful-kid-winner-meme.jpg")
+        const myImg = document.getElementById("image");
+        myImg.src=localStorage.getItem('url');
+        }
+    </script>
+</body>
+</html>
