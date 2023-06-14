@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <P id="paragrafo1"> this a paragraph</P>
+        <P id="paragrafo2"> this a paragraph</P>
+        <script>
+            const p1 = document.getElementById("paragrafo1");
+            const p2 = document.getElementById("paragrafo2");
+            function get(){
+                try{
+                    const request= new XMLHttpRequest();
+                    request.open('GET','h9p://cicacademy2023.ddns.net/esercizi/get',false);
+                    request.send();
+
+                    if(request.status === 200)
+                    {
+                        return request.response;
+                    }
+                }catch{
+                    alert('Endpoint non disponibile');
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded",function(event){
+                const JObj = JSON.parse(get());
+                p1.innerHTML=JObj.data.specializzazione;
+                p2.innerHTML=JObj.data.ambito.contesto;
+            })
+        </script>
+    </body>
+</html>

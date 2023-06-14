@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <P id="paragrafo1"> this a paragraph</P>
+        <P id="paragrafo2"> this a paragraph</P>
+        <P id="paragrafo3"> this a paragraph</P>
+        <script>
+            const p1 = document.getElementById("paragrafo1");
+            const p2 = document.getElementById("paragrafo2");
+            const p3 = document.getElementById("paragrafo3");
+            p1.innerHTML = localStorage.getItem("email");
+            p2.innerHTML = localStorage.getItem("password");
+            p3.innerHTML = localStorage.getItem("nome");
+        </script>
+    </body>
+</html>

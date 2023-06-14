@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <P id="paragrafo1"> this a paragraph</P>
+        <P id="paragrafo2"> this a paragraph</P>
+        <script>
+            const JString = '{"success":true,"data":{"specializzazione":"Design","ambito":{"contesto":"Enterprise"}}}'
+            const p1 = document.getElementById("paragrafo1");
+            const p2 = document.getElementById("paragrafo2");
+            document.addEventListener("DOMContentLoaded",function(event){
+                const JObj = JSON.parse(JString);
+                p1.innerHTML=JObj.data.specializzazione;
+                p2.innerHTML=JObj.data.ambito.contesto;
+            })
+        </script>
+    </body>
+</html>
