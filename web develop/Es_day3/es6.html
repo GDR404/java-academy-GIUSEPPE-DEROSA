@@ -25,8 +25,16 @@
 
             document.addEventListener("DOMContentLoaded",function(event){
                 const JObj = JSON.parse(getParam());
-                p1.innerHTML=JObj.data.specializzazione;
-                p2.innerHTML=JObj.data.ambito.contesto;
+                if(JObj.success)
+                {
+                    p1.innerHTML=JObj.data.specializzazione;
+                    p2.innerHTML=JObj.data.ambito.contesto;
+                }
+                else
+                {
+                    alert("Errore");
+                }
+                
             })
         </script>
     </body>
